@@ -2,7 +2,7 @@
   /* ## Colors */
 
   --Pale-blue: #e0e8ff;
-  --Bright-blue: rgb(56, 41, 224);
+  --Bright-blue: #3829e0;
   --Bright-blue-Hover: #766cf1;
   --Very-pale-blue: #f5f7ff;
   --Desaturated-blue: #7280a7;
@@ -67,7 +67,7 @@ body {
   font: var(--Text-Preset-1);
   color: var(--Dark-blue);
 
-  margin-bottom: 1rem;
+  margin-block: 1rem;
 }
 .text {
   font: var(--Text-Preset-5);
@@ -79,8 +79,8 @@ body {
   background-color: var(--Very-pale-blue);
   align-self: stretch;
 
-  padding: 1rem;
-  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
   border-radius: 0.8rem;
 
   display: flex;
@@ -91,6 +91,7 @@ body {
 .order-plan {
   font: var(--Text-Preset-2);
   color: var(--Dark-blue);
+  padding-bottom: 0.4rem;
 }
 .order-price {
   font: var(--Text-Preset-6);
@@ -121,7 +122,7 @@ body {
 .proceed-btn {
   background-color: var(--Bright-blue);
   color: var(--White);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   box-shadow: 0 var(--XS-20) var(--XS-20) rgba(56, 41, 224, 0.192);
 }
 .proceed-btn:hover {
