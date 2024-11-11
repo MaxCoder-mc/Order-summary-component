@@ -1,0 +1,156 @@
+:root {
+  /* ## Colors */
+
+  --Pale-blue: #e0e8ff;
+  --Bright-blue: rgb(56, 41, 224);
+  --Bright-blue-Hover: #766cf1;
+  --Very-pale-blue: #f5f7ff;
+  --Desaturated-blue: #7280a7;
+  --Dark-blue: #1f2f56;
+  --White: #ffffff;
+
+  --Blue-Shadow: #0d30bd27;
+
+  /* ## Typography */
+  --font: "Red Hat Display", sans-serif;
+  --Text-Preset-1: 900 calc((22 / 16) * 1rem) var(--font);
+  --Text-Preset-2: 900 calc((14 / 16) * 1rem) var(--font);
+  --Text-Preset-3: 900 calc((15 / 16) * 1rem) var(--font);
+  --Text-Preset-4: 700 calc((13 / 16) * 1rem) var(--font);
+  --Text-Preset-5: 500 calc((15 / 16) * 1rem) / 1.6 var(--font);
+  --Text-Preset-6: 500 calc((14 / 16) * 1rem) var(--font);
+
+  /* ## Spacing */
+  --XL-64: calc((64 / 16) * 1rem);
+  --L-40: calc((40 / 16) * 1rem);
+  --M-32: calc((32 / 16) * 1rem);
+  --S-24: calc((24 / 16) * 1rem);
+  --XS-20: calc((20 / 16) * 1rem);
+
+  /* mobile */
+  --Card-Width: calc((327 / 16) * 1rem);
+}
+body {
+  color: var(--Desaturated-blue);
+  background: url("./images/pattern-background-mobile.svg") var(--Pale-blue)
+    no-repeat;
+  background-size: contain;
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-card {
+  background-color: var(--White);
+  max-width: var(--Card-Width);
+  border-radius: var(--XS-20);
+
+  box-shadow: 0 var(--L-40) var(--L-40) var(--Blue-Shadow);
+  overflow: hidden;
+  margin: var(--XL-64) var(--XS-20);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  max-width: calc((360 / 16) * 1rem);
+  padding: var(--M-32) var(--XS-20);
+  margin-inline: auto;
+}
+.title {
+  font: var(--Text-Preset-1);
+  color: var(--Dark-blue);
+
+  margin-bottom: 1rem;
+}
+.text {
+  font: var(--Text-Preset-5);
+  max-width: 95%;
+  margin-bottom: var(--S-24);
+}
+
+.order-details {
+  background-color: var(--Very-pale-blue);
+  align-self: stretch;
+
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.order-plan {
+  font: var(--Text-Preset-2);
+  color: var(--Dark-blue);
+}
+.order-price {
+  font: var(--Text-Preset-6);
+}
+.link:is(:link, :visited) {
+  display: inline-block;
+  font: var(--Text-Preset-4);
+  color: var(--Bright-blue);
+  margin-left: auto;
+  transition: all 0.3s;
+}
+.link:is(:hover) {
+  color: var(--Bright-blue-Hover);
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  align-self: stretch;
+
+  font: var(--Text-Preset-3);
+  padding-block: 0.8rem;
+  border: none;
+  border-radius: 0.65rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.proceed-btn {
+  background-color: var(--Bright-blue);
+  color: var(--White);
+  margin-bottom: 0.5rem;
+  box-shadow: 0 var(--XS-20) var(--XS-20) rgba(56, 41, 224, 0.192);
+}
+.proceed-btn:hover {
+  filter: brightness(170%);
+}
+.cancel-btn {
+  background-color: transparent;
+  color: var(--Desaturated-blue);
+}
+.cancel-btn:hover {
+  color: var(--Dark-blue);
+}
+/* QUERIES */
+@media (min-width: 48rem) {
+  :root {
+    --Text-Preset-1: 900 calc((28 / 16) * 1rem) var(--font);
+    --Text-Preset-2: 900 calc((16 / 16) * 1rem) var(--font);
+    --Text-Preset-4: 700 calc((14 / 16) * 1rem) var(--font);
+    --Text-Preset-5: 500 calc((16 / 16) * 1rem) / 1.6 var(--font);
+    --Text-Preset-6: 500 calc((16 / 16) * 1rem) var(--font);
+
+    --Card-Width: calc((450 / 16) * 1rem);
+  }
+  body {
+    background: url("./images/pattern-background-desktop.svg") var(--Pale-blue)
+      no-repeat;
+    background-size: contain;
+  }
+  .card-content {
+    max-width: calc((380 / 16) * 1rem);
+  }
+}
